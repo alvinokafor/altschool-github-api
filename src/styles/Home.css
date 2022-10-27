@@ -1,0 +1,21 @@
+.homeContainer {
+    background-color: var(--secondary);
+    max-width: 1119px;
+    margin-inline: auto;
+    margin-block: 20px;
+    padding-inline: 40px;
+    padding-block: 80px;
+    border-radius: 8px;
+}
+
+.content {
+    width: 100%;
+}
+
+@media(max-width: 420px) {
+    .homeContainer {
+        max-width: 90%;
+        flex-direction: column;
+        padding-inline: 20px;
+    }
+}

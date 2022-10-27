@@ -16,5 +16,16 @@
 
 body {
   font-family: 'DM Mono', sans-serif;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
 }
 
