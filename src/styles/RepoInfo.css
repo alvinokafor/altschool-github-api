@@ -1,0 +1,22 @@
+.repo-info {
+    margin-top: 50px;
+}
+
+.repo-info p{
+    margin-bottom: 20px;
+}
+
+.repo-info p:nth-of-type(4){
+    margin-bottom: 0;
+}
+
+.repo-info span {
+    font-weight: 500;
+}
+
+@media (max-width: 420px) {
+    .repo-info p {
+        font-size: 0.825rem;
+    }
+
+}

@@ -1,0 +1,25 @@
+.single-repo {
+    max-width: 1119px;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+
+.single-repo-info {
+    background-color: var(--secondary);
+    padding-inline: 40px;
+    padding-block: 35px;
+    border-radius: 8px;
+}
+
+@media (max-width: 420px) {
+    .single-repo {
+        width: 90%;
+    }
+
+    .single-repo-info {
+        background-color: var(--secondary);
+        padding-inline: 20px;
+        padding-block: 35px;
+        border-radius: 8px;
+    }
+}

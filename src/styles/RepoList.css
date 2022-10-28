@@ -1,0 +1,32 @@
+.repo-list {
+    max-width: 1119px;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+
+.back-btn {
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.back-btn i {
+    margin-right: 10px;
+}
+
+.back-btn p {
+    font-size: 1.125rem;
+}
+
+.repo-header {
+    margin-bottom: 30px;
+}
+
+.repo-header h3{
+    font-size: 2rem;
+}
+
+@media (max-width: 420px) {
+    .repo-list {
+        width: 90%;
+    }
+}

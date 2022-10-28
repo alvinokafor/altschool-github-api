@@ -1,0 +1,12 @@
+.repo-desc h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.repo-desc p {
+    color: var(--grey);
+}
+
+.repo-desc {
+    margin-bottom: 50px;
+}
