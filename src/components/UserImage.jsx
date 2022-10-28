@@ -1,9 +1,9 @@
 import '../styles/UserImage.css'
 
-function UserImage () {
+function UserImage ({userImg}) {
     return (
         <div className='user-img'>
-            <img src="https://avatars.githubusercontent.com/u/60660504?v=4" alt="user profile" />
+            <img src={userImg} alt="user profile" />
         </div>
     )
 }
