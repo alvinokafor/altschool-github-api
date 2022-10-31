@@ -5,7 +5,7 @@ function Header({ name, username, bio}) {
     <header>
       <div className="user-bio">
         <h2>{name}</h2>
-        <p>{username}</p>
+        <p>@{username}</p>
         <p>{bio}</p>
       </div>
 

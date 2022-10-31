@@ -2,14 +2,11 @@
     text-align: center;
 }
 
-.control {
+#control {
     width: 126px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
-.control:nth-of-type(2) {
-    margin-left: 20px;
-}
 
 .pagination button {
     font-family: inherit;
@@ -30,11 +27,17 @@
     border: 1px solid var(--white);
 }
 
-.btn-active {
+#btn-active {
     border: 1px solid var(--white);
 }
 
-.btn-disabled {
+.button {
+    border: 1px solid black;
+}
+
+#btn-disabled {
+    width: 126px;
+    /* margin-right: 20px; */
     background-color: var(--grey);
 }
 

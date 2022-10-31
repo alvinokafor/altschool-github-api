@@ -14,6 +14,10 @@
     font-weight: 500;
 }
 
+.not-available {
+    color: var(--grey);
+}
+
 @media (max-width: 420px) {
     .repo-info p {
         font-size: 0.825rem;

@@ -1,3 +1,4 @@
+import useFetch from "../hooks/useFetch";
 import Header from "../components/Header";
 import UserImage from "../components/UserImage";
 import AccountInfo from "../components/AccountInfo";
@@ -6,9 +7,17 @@ import AvatarLoader from "../components/loader/AvatarLoader";
 import HomeLoader from "../components/loader/HomeLoader";
 import "../styles/Home.css";
 
-function Home({ profile }) {
+function Home() {
+
+  //fetches data from the api
+  const { data: profile } = useFetch(
+    "https://api.github.com/users/alvinokafor"
+  );
+
   return (
     <>
+
+      {/* checks if data coming from the api is populatd with info or available */}
       {Object.keys(profile).length > 0 && (
         <section className="homeContainer flex">
           <div>
@@ -38,6 +47,7 @@ function Home({ profile }) {
         </section>
       )}
 
+      {/* if data isn't yet available, display a loading state */}
       {Object.keys(profile).length === 0 && (
         <section className="homeContainer flex">
           <div>

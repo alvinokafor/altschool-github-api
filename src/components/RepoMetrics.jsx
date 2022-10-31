@@ -1,22 +1,29 @@
-import '../styles/RepoMetrics.css'
+import "../styles/RepoMetrics.css";
 
-function RepoMetrics() {
+function RepoMetrics({ forks, openIssues, watchers, repo }) {
   return (
     <section className="repo-metrics">
-   
-        <div className="open-issues">
-          <p>Open Issues</p>
-          <p>24</p>
-        </div>
+      <div className="open-issues">
+        <p>Open Issues</p>
+        <p>
+          {repo.source?.open_issues === undefined
+            ? openIssues
+            : repo.source.open_issues}
+        </p>
+      </div>
 
       <div className="forks">
         <p>Forks</p>
-        <p>5</p>
+        <p>{repo.source?.forks === undefined ? forks : repo.source.forks}</p>
       </div>
 
       <div className="watchers">
         <p>Watchers</p>
-        <p>8</p>
+        <p>
+          {repo.source?.watchers === undefined
+            ? watchers
+            : repo.source.watchers}
+        </p>
       </div>
     </section>
   );

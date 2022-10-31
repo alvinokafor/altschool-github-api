@@ -29,3 +29,10 @@ a {
   text-decoration: none;
 }
 
+.btn-active {
+  border: 1px solid var(--white);
+}
+
+.button {
+  border: 1px solid black;
+}
