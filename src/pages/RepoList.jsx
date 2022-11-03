@@ -42,7 +42,7 @@ function RepoList() {
     <>
 
       <Helmet>
-        <title>Home</title>
+        <title>Repositories</title>
         <meta
           name="description"
           content="Github respositories of user"

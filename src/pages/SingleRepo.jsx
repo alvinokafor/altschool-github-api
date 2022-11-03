@@ -18,12 +18,12 @@ function SingleRepo() {
     <>
     
       <Helmet>
-        <title>Home</title>
+        <title>Details</title>
         <meta
           name="description"
           content="Respository detail"
         />
-        <link rel="canonical" href="/respository" />
+        <link rel="canonical" href={`/repositories/${id}`} />
       </Helmet>
 
     <section className="single-repo">

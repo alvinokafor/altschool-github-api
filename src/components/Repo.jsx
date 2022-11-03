@@ -6,7 +6,7 @@ function Repo({ num, repoTitle, repoLink, currentPage }) {
   const [cardNum] = useState(currentPage);
 
   return (
-    <Link to={`/repository/${repoTitle}`}>
+    <Link to={`/repositories/${repoTitle}`}>
       <div className="repo-card flex">
         <h5>{(cardNum - 1) * 5 + num + 1}</h5>
         <p id='repoTitle'>{repoTitle}</p>

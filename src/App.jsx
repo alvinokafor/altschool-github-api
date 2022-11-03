@@ -4,7 +4,6 @@ import RepoList from "./pages/RepoList";
 import SingleRepo from "./pages/SingleRepo";
 import NotFound from "./pages/NotFound";
 
-
 function App() {
   return (
     // https://api.github.com/users/alvinokafor/repos
@@ -14,8 +13,10 @@ function App() {
       <Routes>
         {/* Routes for the application */}
         <Route path="/" element={<Home />} />
-        <Route path="/repositories" element={<RepoList />} />
-        <Route path="/repository/:id" element={<SingleRepo />} />
+        <Route path="/repositories">
+          <Route index element={<RepoList />} />
+          <Route path=":id" element={<SingleRepo />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
