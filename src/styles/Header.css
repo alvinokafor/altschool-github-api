@@ -18,12 +18,25 @@ header {
     color: var(--grey);
 }
 
+.view-repo {
+    padding-inline: 32px;
+    padding-block: 11px;
+    color: var(--primary);
+    background-color: var(--white);
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
 @media (max-width: 420px) {
     header {
         flex-direction: column;
     }
 
-    .joined {
+    .view-repo {
         margin-top: 12px;
     }
 }

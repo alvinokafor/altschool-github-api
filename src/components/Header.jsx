@@ -1,6 +1,7 @@
-import '../styles/Header.css'
+import { Link } from "react-router-dom";
+import "../styles/Header.css";
 
-function Header({ name, username, bio}) {
+function Header({ name, username, bio }) {
   return (
     <header>
       <div className="user-bio">
@@ -9,8 +10,10 @@ function Header({ name, username, bio}) {
         <p>{bio}</p>
       </div>
 
-      <div className="joined">
-        <p>Joined 21 Jan 2022</p>
+      <div>
+        <Link to='/repositories'>
+          <button className="view-repo">View Repositories</button>
+        </Link>
       </div>
     </header>
   );
