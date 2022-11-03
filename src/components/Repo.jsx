@@ -9,8 +9,8 @@ function Repo({ num, repoTitle, repoLink, currentPage }) {
     <Link to={`/repository/${repoTitle}`}>
       <div className="repo-card flex">
         <h5>{(cardNum - 1) * 5 + num + 1}</h5>
-        <p>{repoTitle}</p>
-        <div className="repo-link flex">
+        <p id='repoTitle'>{repoTitle}</p>
+        <div className="repo-link flex" id='repoURL'>
           <i className="fa-solid fa-link"></i>
           <p>{repoLink}</p>
         </div>

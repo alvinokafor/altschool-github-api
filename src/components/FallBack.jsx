@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/ErrorBoundary.css";
 
-export default function ErrorBoundary() {
+export default function FallBack() {
   return (
     <section className="error-boundary">
       <div>

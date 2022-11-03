@@ -31,7 +31,7 @@ function Pagination({ reposPerPage, totalRepos, currentPage, paginate, prev, nex
         disabled={checkPrevDisabled(currentPage)}
         id={checkPrevDisabled(currentPage) ? 'btn-disabled' : 'control'}
         onClick={() => prev()}  //fires the previous button function 
-      >Previous</button>
+      >Prev</button>
 
       {pageNumbers.map((btnNum) => (
         <button 

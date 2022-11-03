@@ -27,7 +27,7 @@ function RepoInfo({ owner, ownerURL, license, language, repoURL, repo }) {
       </p>
       <div className="repo-link flex repo-info-div">
         <i className="fa-solid fa-link"></i>
-        <a href={repoURL}>{repoURL}</a>
+        <a id='infoURL' href={repoURL}>{repoURL}</a>
       </div>
     </section>
   );
