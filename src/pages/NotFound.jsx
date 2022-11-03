@@ -9,7 +9,7 @@ function NotFound() {
         <div className="error-info">
           <h2>Page not found</h2>
           <p>
-            This Page doesn`t exist or was removed! We suggest you back to home.
+            This Page doesn`t exist or was removed! We suggest you go back to the home page.
           </p>
           <Link to="/">
             <button>Home</button>

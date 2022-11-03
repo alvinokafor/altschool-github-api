@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import useFetch from "../hooks/useFetch";
 import Repo from "../components/Repo";
 import Pagination from "../components/Pagination";
@@ -38,43 +39,55 @@ function RepoList() {
   };
 
   return (
-    <section className="repo-list">
-      <div className="repo-header">
-        <Link to="/">
-          <div className="back-btn flex">
-            <i className="fa-solid fa-arrow-left"></i>
-            <p>Back</p>
-          </div>
-        </Link>
-        <h3>Respositories</h3>
-      </div>
+    <>
 
-      {/* checks if data coming from the api is populatd with info or available */}
-      {repolist.length > 0 &&
-        current.map((repo, index) => (
-          <Repo
-            key={repo.id}
-            num={index}
-            repoTitle={repo.name}
-            repoLink={repo.html_url}
-            repolist={repolist}
-            currentPage={currentPage}
-          />
-        ))}
+      <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="Github respositories of user"
+        />
+        <link rel="canonical" href="/repositories" />
+      </Helmet>
 
-      {/* if data isn't available, then display a loading state */}
-      {repolist.length === 0 &&
-        [1, 2, 3, 4, 5].map((n) => <RepoLoader key={n} />)}
+      <section className="repo-list">
+        <div className="repo-header">
+          <Link to="/">
+            <div className="back-btn flex">
+              <i className="fa-solid fa-arrow-left"></i>
+              <p>Back</p>
+            </div>
+          </Link>
+          <h3>Respositories</h3>
+        </div>
 
-      <Pagination
-        paginate={paginate}
-        totalRepos={repolist.length}
-        reposPerPage={reposPerPage}
-        currentPage={currentPage}
-        prev={prev}
-        next={next}
-      />
-    </section>
+        {/* checks if data coming from the api is populatd with info or available */}
+        {repolist.length > 0 &&
+          current.map((repo, index) => (
+            <Repo
+              key={repo.id}
+              num={index}
+              repoTitle={repo.name}
+              repoLink={repo.html_url}
+              repolist={repolist}
+              currentPage={currentPage}
+            />
+          ))}
+
+        {/* if data isn't available, then display a loading state */}
+        {repolist.length === 0 &&
+          [1, 2, 3, 4, 5].map((n) => <RepoLoader key={n} />)}
+
+        <Pagination
+          paginate={paginate}
+          totalRepos={repolist.length}
+          reposPerPage={reposPerPage}
+          currentPage={currentPage}
+          prev={prev}
+          next={next}
+        />
+      </section>
+    </>
   );
 }
 

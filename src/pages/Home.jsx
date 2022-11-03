@@ -1,4 +1,5 @@
 import useFetch from "../hooks/useFetch";
+import { Helmet } from "react-helmet-async";
 import Header from "../components/Header";
 import UserImage from "../components/UserImage";
 import AccountInfo from "../components/AccountInfo";
@@ -16,6 +17,12 @@ function Home() {
 
   return (
     <>
+
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="Home page that contains github profile details of user"/>
+        <link rel="canonical" href="/" />
+      </Helmet>
 
       {/* checks if data coming from the api is populatd with info or available */}
       {Object.keys(profile).length > 0 && (

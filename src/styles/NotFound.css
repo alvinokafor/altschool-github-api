@@ -28,6 +28,7 @@
     width: 70%;
     margin-inline: auto;
     margin-bottom: 12px;
+    line-height: 130%;
 }
 
 .error-info button {

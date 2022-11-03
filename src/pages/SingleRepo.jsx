@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import useFetch from "../hooks/useFetch";
 import RepoDescription from "../components/RepoDescription";
 import RepoMetrics from "../components/RepoMetrics";
@@ -14,6 +15,17 @@ function SingleRepo() {
   );
 
   return (
+    <>
+    
+      <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="Respository detail"
+        />
+        <link rel="canonical" href="/respository" />
+      </Helmet>
+
     <section className="single-repo">
       {Object.keys(repo).length > 0 && (
         <>
@@ -66,6 +78,7 @@ function SingleRepo() {
         </>
       )}
     </section>
+    </>
   );
 }
 
